@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript</title>
+       
+    </head>
+    <body>
+        <h1>Dime la palabra mágica</h1>
+        <input type="text" id="entradaUsuario" placeholder="Palabra mágica">
+        <button id="miBoton">Comprueba</button>
+        <script type="text/javascript">
+            document.getElementById("miBoton").onclick = function()
+            {
+                var palabraMagica="abracadabra";
+                var textoUsuario;
+                    
+                textoUsuario = document.getElementById("entradaUsuario").value;
+                if (textoUsuario == palabraMagica)
+                    {
+                        alert("Enhorabuena!!! Has acertado la palabra");
+                    }
+                else
+                    {
+                        alert("Lo siento, esa no era la palabra");
+                    }
+            }
+            
+        </script>
+    </body>
+</html>

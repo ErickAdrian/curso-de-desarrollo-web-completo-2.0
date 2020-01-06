@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jquery</title>
+        
+        <script src="jquery.min.js"></script>
+        <style type="text/css">
+            #parrafoOculto
+            {
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="texto">Esto es un texto</p>
+        <button id="fadeInOutBoton">Aparecer/Desvanecer</button>
+        <script type="text/javascript">
+            var mostrandoTexto = true;
+            
+            $("#fadeInOutBoton").click(function(){
+                if (mostrandoTexto)
+                    {
+                        $("#texto").fadeOut(function(){
+                            mostrandoTexto = false;
+                        });   
+                    }
+                else
+                    {
+                       $("#texto").fadeIn(function(){
+                            mostrandoTexto = true;
+                        });    
+                    }
+                
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas II</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <style>
+        #miCanvas {
+            border: 1px solid grey;
+        }  
+    </style>
+  </head>
+
+  <body>
+    <canvas id="miCanvas" width="500" height="400">
+    </canvas>    
+    <script>
+        var miCanvas = document.getElementById("miCanvas");
+        var context = miCanvas.getContext("2d");
+        var gradiente = context.createLinearGradient(150,100,350,300);
+        gradiente.addColorStop(0, "white");
+        gradiente.addColorStop(1, "#4BD337");
+        //context.fillStyle = "#4BD337";
+        context.fillStyle = gradiente;
+        context.fillRect(150,100,200,200);
+        context.moveTo(150,100);
+        context.lineTo(350,300);
+        context.strokeStyle = "#e81717";
+        context.lineWidth = 20;
+        context.stroke();
+        context.moveTo(350,100);
+        context.lineTo(150,300);
+        context.strokeStyle = "#e81717";
+        context.stroke();
+        
+        // Circunferencias
+        context.beginPath();
+        context.arc(100,100,50,0,2*Math.PI);
+        context.stroke();
+        context.beginPath();
+        // Arco
+        context.lineWidth = 10;
+        context.strokeStyle = "#3c97f2";
+        context.arc(400,300,50,Math.PI,2*Math.PI);
+        context.stroke();
+        
+        var gradienteTexto =context.createLinearGradient(200,50,300,50);
+        gradienteTexto.addColorStop(0,"red");
+        gradienteTexto.addColorStop(1,"yellow");
+
+        context.fillStyle = gradienteTexto;
+        context.font = "20px Arial";
+        context.fillText("Mi canvas",200,50);
+
+
+    </script>  
+  </body>
+</html>

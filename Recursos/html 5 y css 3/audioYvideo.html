@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video y Audio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    
+  </head>
+
+  <body>
+      <video width="320" height="240" controls id="video">
+        <source src="small.mp4" type="video/mp4">
+          Por favor, actualiza tu navegador!
+      </video>
+      <button id="play">Play</button>
+      <audio controls>
+        <source src="song.mp3" type="audio/mpeg">
+      </audio>
+      <script>
+        document.getElementById("play").onclick = function() {
+            if (document.getElementById("video").paused){
+                document.getElementById("video").play();
+                this.innerHTML = "Pause";
+            }
+            else
+                {
+                    document.getElementById("video").pause();
+                    this.innerHTML = "Play";
+                }
+        }
+      
+      </script>
+  </body>
+</html>

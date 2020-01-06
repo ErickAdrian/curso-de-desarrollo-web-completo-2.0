@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selectores CSS 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+      
+      <style>
+          h1 {
+              color:red;
+          }
+          .green{
+              color:green;
+          }
+          #blue {
+              font-size:200%;
+          }
+          div p {
+              font-weight:bold;
+          }
+          h3 ~ p {
+              text-decoration: underline;
+          }
+          h3 + p {
+              font-size:250%;
+          }
+          a[target] {
+              color: yellow;
+          }
+          a[href*="google"]{
+              font-size:200%;
+          }
+          <!--
+          
+              ^= - Comienzan con una determinada cadena
+              $= - Terminan con una cadena determinada
+              -= - La cadena en cuestión está separada entre espacios
+              |= tiene el valor separado por '-'
+          -->
+          
+      </style>
+      
+  </head>
+  
+  <body>
+      <h1>Esto es un encabezado de nivel 1</h1>
+      <div>
+            <h3>Esto es un encabezado de nivel 3</h3>
+            <p class="green">Esto es un párrafo</p>
+            <a id="blue" target="_blank" href="">Esto es un enlace</a>
+            <p>Soy otro párrafo</p>
+      </div>
+      <p>Estoy fuera del elemento div</p>
+      <a href="http://images.google.com">Soy otro enlace</a>
+  </body>
+    
+</html>

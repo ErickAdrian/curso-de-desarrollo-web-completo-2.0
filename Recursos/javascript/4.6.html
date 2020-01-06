@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript</title>
+       <style type="text/css">
+            .circulo
+           {
+               width:150px;
+               height:150px;
+               float:left;
+               margin-right:50px;
+               border-radius:50%;
+           }
+           #circulo-rojo
+           {
+               background-color:red;
+           }
+           #circulo-amarillo
+           {
+               background-color:yellow;
+           }
+           #circulo-verde
+           {
+               background-color:green;
+           }
+        </style>
+    </head>
+    <body>
+        <div id="circulo-rojo" class="circulo"></div>
+        <div id="circulo-amarillo" class="circulo"></div>
+        <div id="circulo-verde" class="circulo"></div>
+
+        <script type="text/javascript">
+            document.getElementById("circulo-rojo").onclick = function ()
+            {
+                document.getElementById("circulo-rojo").style.display = "none";
+            }
+            document.getElementById("circulo-amarillo").onclick = function ()
+            {
+                document.getElementById("circulo-amarillo").style.display = "none";
+            }
+            document.getElementById("circulo-verde").onclick = function ()
+            {
+                document.getElementById("circulo-verde").style.display = "none";
+            }
+            
+            
+            
+        </script>
+    </body>
+</html>

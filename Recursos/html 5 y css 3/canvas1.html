@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas I</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <style>
+        #miCanvas {
+            border: 1px solid grey;
+        }  
+    </style>
+  </head>
+
+  <body>
+    <canvas id="miCanvas" width="500" height="400">
+    </canvas>    
+    <script>
+        var miCanvas = document.getElementById("miCanvas");
+        var context = miCanvas.getContext("2d");
+        context.fillStyle = "#4BD337";
+        context.fillRect(150,100,200,200);
+        context.moveTo(150,100);
+        context.lineTo(350,300);
+        context.strokeStyle = "#e81717";
+        context.lineWidth = 20;
+        context.stroke();
+        context.moveTo(350,100);
+        context.lineTo(150,300);
+        context.strokeStyle = "#e81717";
+        context.stroke();
+        
+        // Circunferencias
+        context.beginPath();
+        context.arc(100,100,50,0,2*Math.PI);
+        context.stroke();
+        context.beginPath();
+        // Arco
+        context.lineWidth = 10;
+        context.strokeStyle = "#3c97f2";
+        context.arc(400,300,50,Math.PI,2*Math.PI);
+        context.stroke();
+
+
+
+    </script>  
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery</title>
+        <script src="jquery.min.js">
+        </script>
+        <script src="jquery-ui/jquery-ui.js"></script>
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <style type="text/css">
+            #contenedor
+            {
+                background-color:yellow;
+                width:400px;
+                height:300px;
+            }
+            #redimensionable
+            {
+                background-color:blue;
+                width:200px;
+                height:100px;
+            }
+            #tambien
+            {
+                background-color:green;
+                width:200px;
+                height:100px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="arrastrable"><p>Arrástrame</p></div>
+        <div id="contenedor">
+            <span>Estoy encerrado aquí!</span>
+        </div>
+        <div id="redimensionable"></div>
+        <div id="tambien"></div>
+        <script type="text/javascript">
+         
+            $( "#arrastrable" ).draggable({ axis: "x" });
+            $("span").draggable({ containment: "#contenedor"});
+            $("#redimensionable").resizable({
+                grid: 50,alsoResize: "#tambien",
+                resize: function(event,ui){
+                    if ($("#redimensionable").width()>400){
+                        alert("Ya es lo suficientemente grande!");
+                    }
+                }
+            });
+            $("#tambien").resizable();
+        </script>
+    </body>
+</html>
